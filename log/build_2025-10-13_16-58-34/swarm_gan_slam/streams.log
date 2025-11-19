@@ -1,0 +1,20 @@
+[0.297s] Invoking command in '/home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam': PYTHONPATH=/home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam/build --no-deps symlink_data
+[0.421s] running develop
+[0.510s] running egg_info
+[0.510s] writing swarm_gan_slam.egg-info/PKG-INFO
+[0.510s] writing dependency_links to swarm_gan_slam.egg-info/dependency_links.txt
+[0.510s] writing entry points to swarm_gan_slam.egg-info/entry_points.txt
+[0.510s] writing requirements to swarm_gan_slam.egg-info/requires.txt
+[0.510s] writing top-level names to swarm_gan_slam.egg-info/top_level.txt
+[0.511s] reading manifest file 'swarm_gan_slam.egg-info/SOURCES.txt'
+[0.512s] writing manifest file 'swarm_gan_slam.egg-info/SOURCES.txt'
+[0.512s] running build_ext
+[0.512s] Creating /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/lib/python3.10/site-packages/swarm-gan-slam.egg-link (link to .)
+[0.513s] Installing dataset_generator script to /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/lib/swarm_gan_slam
+[0.513s] Installing gan_processor script to /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/lib/swarm_gan_slam
+[0.513s] Installing map_merger script to /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/lib/swarm_gan_slam
+[0.513s] Installing rover_controller script to /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/lib/swarm_gan_slam
+[0.513s] 
+[0.513s] Installed /home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam
+[0.513s] running symlink_data
+[0.526s] Invoked command in '/home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam' returned '0': PYTHONPATH=/home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam/build --no-deps symlink_data

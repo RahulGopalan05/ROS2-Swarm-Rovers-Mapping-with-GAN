@@ -1,0 +1,35 @@
+[0.366s] Invoking command in '/home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam': PYTHONPATH=/home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam/build --no-deps symlink_data
+[0.506s] running develop
+[0.589s] running egg_info
+[0.589s] creating swarm_gan_slam.egg-info
+[0.589s] writing swarm_gan_slam.egg-info/PKG-INFO
+[0.589s] writing dependency_links to swarm_gan_slam.egg-info/dependency_links.txt
+[0.589s] writing entry points to swarm_gan_slam.egg-info/entry_points.txt
+[0.589s] writing requirements to swarm_gan_slam.egg-info/requires.txt
+[0.589s] writing top-level names to swarm_gan_slam.egg-info/top_level.txt
+[0.589s] writing manifest file 'swarm_gan_slam.egg-info/SOURCES.txt'
+[0.590s] reading manifest file 'swarm_gan_slam.egg-info/SOURCES.txt'
+[0.590s] writing manifest file 'swarm_gan_slam.egg-info/SOURCES.txt'
+[0.591s] running build_ext
+[0.591s] Creating /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/lib/python3.10/site-packages/swarm-gan-slam.egg-link (link to .)
+[0.591s] Installing dataset_generator script to /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/lib/swarm_gan_slam
+[0.591s] Installing gan_processor script to /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/lib/swarm_gan_slam
+[0.591s] Installing map_merger script to /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/lib/swarm_gan_slam
+[0.591s] Installing rover_controller script to /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/lib/swarm_gan_slam
+[0.591s] 
+[0.591s] Installed /home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam
+[0.591s] running symlink_data
+[0.591s] creating /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/share/ament_index
+[0.591s] creating /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/share/ament_index/resource_index
+[0.591s] creating /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/share/ament_index/resource_index/packages
+[0.592s] symbolically linking /home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam/resource/swarm_gan_slam -> /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/share/ament_index/resource_index/packages
+[0.592s] symbolically linking /home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam/package.xml -> /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/share/swarm_gan_slam
+[0.592s] creating /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/share/swarm_gan_slam/launch
+[0.592s] symbolically linking /home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam/launch/swarm_launch.py -> /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/share/swarm_gan_slam/launch
+[0.592s] creating /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/share/swarm_gan_slam/worlds
+[0.592s] symbolically linking /home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam/worlds/swarm_world.world -> /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/share/swarm_gan_slam/worlds
+[0.592s] creating /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/share/swarm_gan_slam/urdf
+[0.592s] symbolically linking /home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam/urdf/rover.urdf -> /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/share/swarm_gan_slam/urdf
+[0.592s] creating /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/share/swarm_gan_slam/models
+[0.592s] symbolically linking /home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam/models/rover.sdf -> /home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/share/swarm_gan_slam/models
+[0.603s] Invoked command in '/home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam' returned '0': PYTHONPATH=/home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rahul/swarm_gan_slam_ws/install/swarm_gan_slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rahul/swarm_gan_slam_ws/build/swarm_gan_slam/build --no-deps symlink_data

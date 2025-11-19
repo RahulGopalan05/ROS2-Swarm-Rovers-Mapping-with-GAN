@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="rover">
+    
+    <!-- Base Link - CENTER OF ROBOT -->
+    <link name="base_link">
+      <pose>0 0 0.1 0 0 0</pose>
+      <inertial>
+        <mass>10.0</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>0.1</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.15</iyy><iyz>0</iyz><izz>0.2</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box><size>0.5 0.4 0.2</size></box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box><size>0.5 0.4 0.2</size></box>
+        </geometry>
+        <material>
+          <ambient>0.2 0.4 0.8 1</ambient>
+          <diffuse>0.2 0.4 0.8 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Left Drive Wheel - AT CENTER, LEFT SIDE -->
+    <link name="left_wheel">
+      <pose>0 0.25 0.1 -1.5707963 0 0</pose>
+      <inertial>
+        <mass>1.0</mass>
+        <inertia>
+          <ixx>0.005</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.005</iyy><iyz>0</iyz><izz>0.005</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <cylinder><radius>0.1</radius><length>0.08</length></cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100.0</mu>
+              <mu2>50.0</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <kp>10000000.0</kp>
+              <kd>1.0</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <cylinder><radius>0.1</radius><length>0.08</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.1 0.1 0.1 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <joint name="left_wheel_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>left_wheel</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <!-- Right Drive Wheel - AT CENTER, RIGHT SIDE -->
+    <link name="right_wheel">
+      <pose>0 -0.25 0.1 -1.5707963 0 0</pose>
+      <inertial>
+        <mass>1.0</mass>
+        <inertia>
+          <ixx>0.005</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.005</iyy><iyz>0</iyz><izz>0.005</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <cylinder><radius>0.1</radius><length>0.08</length></cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100.0</mu>
+              <mu2>50.0</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <kp>10000000.0</kp>
+              <kd>1.0</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <cylinder><radius>0.1</radius><length>0.08</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.1 0.1 0.1 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <joint name="right_wheel_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>right_wheel</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <!-- Caster Wheel - AT BACK FOR STABILITY -->
+    <link name="caster_wheel">
+      <pose>-0.2 0 0.05 0 0 0</pose>
+      <inertial>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.001</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.001</iyy><iyz>0</iyz><izz>0.001</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <sphere><radius>0.05</radius></sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>0.001</mu>
+              <mu2>0.001</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <kp>10000000.0</kp>
+              <kd>1.0</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <sphere><radius>0.05</radius></sphere>
+        </geometry>
+        <material>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.3 0.3 0.3 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <joint name="caster_wheel_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>caster_wheel</child>
+    </joint>
+
+    <!-- LiDAR on top -->
+    <link name="lidar_link">
+      <pose>0 0 0.3 0 0 0</pose>
+      <inertial>
+        <mass>0.3</mass>
+        <inertia>
+          <ixx>0.0001</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.0001</iyy><iyz>0</iyz><izz>0.0001</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.07</length></cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.07</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>0.8 0.1 0.1 1</ambient>
+          <diffuse>0.8 0.1 0.1 1</diffuse>
+        </material>
+      </visual>
+
+      <sensor name="lidar_sensor" type="ray">
+        <always_on>true</always_on>
+        <update_rate>10</update_rate>
+        <visualize>true</visualize>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>360</samples>
+              <resolution>1</resolution>
+              <min_angle>-3.14159</min_angle>
+              <max_angle>3.14159</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.15</min>
+            <max>12.0</max>
+            <resolution>0.01</resolution>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.01</stddev>
+          </noise>
+        </ray>
+        <plugin name="scan" filename="libgazebo_ros_ray_sensor.so">
+          <ros>
+            <remapping>~/out:=scan</remapping>
+          </ros>
+          <output_type>sensor_msgs/LaserScan</output_type>
+          <frame_name>lidar_link</frame_name>
+        </plugin>
+      </sensor>
+    </link>
+
+    <joint name="lidar_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>lidar_link</child>
+    </joint>
+
+    <!-- Differential Drive Controller Plugin -->
+    <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
+      <update_rate>50</update_rate>
+      <left_joint>left_wheel_joint</left_joint>
+      <right_joint>right_wheel_joint</right_joint>
+      <wheel_separation>0.5</wheel_separation>
+      <wheel_diameter>0.2</wheel_diameter>
+      <max_wheel_torque>50</max_wheel_torque>
+      <max_wheel_acceleration>2.0</max_wheel_acceleration>
+      <command_topic>cmd_vel</command_topic>
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>false</publish_wheel_tf>
+      <odometry_topic>odom</odometry_topic>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+    </plugin>
+
+  </model>
+</sdf>
+

@@ -1,0 +1,6 @@
+[console_scripts]
+dataset_generator = swarm_gan_slam.dataset_generator:main
+gan_processor = swarm_gan_slam.gan_processor:main
+map_merger = swarm_gan_slam.map_merger:main
+rover_controller = swarm_gan_slam.rover_controller:main
+
